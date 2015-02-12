@@ -8,7 +8,34 @@
 </head>
 <body>
 
-<%= yield %>
-
+  <nav class="navbar nvabar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">Ruby Onsen</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Fokayx</a></li>
+        <% unless user_signed_in? %>
+        <li><%= link_to "我是OKAY", new_user_session_path %></li>
+        <% else %>
+        <% if can? :delete , :users %>
+        <li><%= link_to "我是路人", destroy_user_session_path, method: :delete %>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  </nav>
+  <div class="container">
+    <% render 'flash' %>
+    <div class="row">
+      <div class="col-md-8">
+        <%= yield %>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
 </body>
 </html>
