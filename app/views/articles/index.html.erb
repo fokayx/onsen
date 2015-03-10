@@ -1,0 +1,7 @@
+<% @article.each do |article| %>
+<div class="article-post">
+ <h2><%= article.title %></h2>
+ <p><%= sanitize  article.content[0,140] %>...</p>
+ <p> <%= link_to "按這裡看看", article %></p>
+</div>
+<% end %>
