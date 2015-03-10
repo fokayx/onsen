@@ -7,7 +7,7 @@ gem 'rails', '4.2.0'
 gem 'sass-rails'
 gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -34,8 +34,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #page
 gem 'kaminari'
 
-gem 'ckeditor'
-
+#gem 'ckeditor'
+gem 'bootstrap-wysihtml5-rails'
+gem 'simple_form'
 gem 'carrierwave'
 gem 'mini_magick'
 

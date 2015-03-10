@@ -16,5 +16,4 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
-//= require ckeditor/init
-//= require ckeditor/ckeditor.js
+//= require bootstrap-wysihtml5
